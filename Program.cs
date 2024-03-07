@@ -7,8 +7,17 @@ namespace cc3_1b_garciaja_twosum
     {
         static void Main(string[] args)
         {
-            int[] nums = { 3,3 };
-            int target = 6;
+            Console.WriteLine("Enter amount of numbers in array: ");
+            int nos = Convert.ToInt32(Console.ReadLine());
+            int[] nums = new int[nos];
+
+            for (int x = 0; x < nos; x++)
+            {
+                Console.WriteLine("Enter numbers: ");
+                nums[x] = Convert.ToInt32(Console.ReadLine());
+            }
+            Console.WriteLine("Enter Target: ");
+            int target = Convert.ToInt32(Console.ReadLine());
 
             for (int i = 0; i < nums.Length; i++)
             {
@@ -24,29 +33,6 @@ namespace cc3_1b_garciaja_twosum
                     }                   
                 }
             }
-
-
-            //foreach (int x in nums)
-            //{
-                
-                
-            //    foreach (int y in nums)
-            //    {
-            //        int index1 = Array.IndexOf(nums, x);
-            //        int index2 = Array.IndexOf(nums, y);
-
-            //        if (index1 == index2) 
-            //        {
-            //            break;
-            //        }   
-            //        else if (x + y == target)
-            //        {
-                        
-            //            Console.WriteLine($"[ {index1}, {index2} ]");
-                        
-            //        }  
-            //    }     
-            //}
         }
     }
 }
